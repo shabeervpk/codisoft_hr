@@ -6,7 +6,7 @@
     'version': '12.0.1.',
     'license': 'AGPL-3',
     'category': 'Human Resources',
-    'author': "Codisoft FZCO",
+    'author': "Codisoft",
     'summary': "Add an option to leave type for excluding weekend / rest days.",
     'website': 'http://www.codisoft.com',
     'depends': [
