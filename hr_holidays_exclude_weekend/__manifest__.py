@@ -13,7 +13,6 @@
         'hr_holidays',
     ],
     'data': [
-        'views/hr_holidays_exclude_weekend_view.xml',
         'views/hr_leave_type.xml'
     ],
     
