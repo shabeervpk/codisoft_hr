@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_summary,stock.summary,model_stock_summary,,1,1,1,1
+access_stock_inv_account_difference,stock.inv.account.difference,model_stock_inv_account_difference,,1,1,1,1
