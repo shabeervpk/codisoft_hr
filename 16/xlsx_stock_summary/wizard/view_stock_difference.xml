@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="stock_inv_account_difference_view_form" model="ir.ui.view">
+        <field name="name">stock.inv.account.difference.form</field>
+        <field name="model">stock.inv.account.difference</field>
+        <field name="arch" type="xml">
+            <form string="Inventory &amp; Account Stock Difference">
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="account_id"/>
+                    </group>
+                    <group>
+                        <field name="company_id" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_print_difference" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_difference_action" model="ir.actions.act_window">
+        <field name="name">Inventory &amp; Account Stock Difference</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.inv.account.difference</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_inv_account_difference_view_form"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="xlsx_stock_summary.stock_difference" name="Inventory &amp; Account Stock Difference"
+              parent="stock.menu_warehouse_report"
+              sequence="111" action="xlsx_stock_summary.stock_difference_action"/>
+
+</odoo>

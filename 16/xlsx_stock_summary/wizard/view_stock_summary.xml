@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="stock_summary_view_form" model="ir.ui.view">
+        <field name="name">stock.summary.form</field>
+        <field name="model">stock.summary</field>
+        <field name="arch" type="xml">
+            <form string="Stock Summary">
+                <group>
+                    <field name="from_date" required="1"/>
+                    <field name="to_date" required="1"/>
+                    <field name="company_id" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="action_print_stock" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="stock_summary_action" model="ir.actions.act_window">
+        <field name="name">Stock Move Summary</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">stock.summary</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="stock_summary_view_form"/>
+        <field name="target">new</field>
+    </record>
+    <menuitem id="xlsx_stock_summary.stock_valuation" name="Stock Move Summary" parent="stock.menu_warehouse_report"
+              sequence="111" action="xlsx_stock_summary.stock_summary_action"/>
+
+</odoo>

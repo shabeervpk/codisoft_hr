@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="xlsx_stock_summary_report" model="ir.actions.report">
+        <field name="name">Stock Summary</field>
+        <field name="model">stock.summary</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">xlsx_stock_summary.xlsx_stock_summary_report</field>
+        <field name="report_file">Stock Summary Excel</field>
+        <field name="binding_model_id" ref="xlsx_stock_summary.model_stock_summary"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_inv_acc_stock_difference_report" model="ir.actions.report">
+        <field name="name">Inventory &amp; Account Stock Difference</field>
+        <field name="model">stock.inv.account.difference</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">xlsx_stock_summary.xlsx_stock_difference_report</field>
+        <field name="report_file">Inventory &amp; Account Stock Difference</field>
+        <field name="binding_model_id" ref="xlsx_stock_summary.model_stock_inv_account_difference"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
